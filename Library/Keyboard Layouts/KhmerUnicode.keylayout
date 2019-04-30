@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!-- GitHub Repo https://github.com/peakhmr/Khmer-Unicode-for-MacOS -->
+<!-- GitHub Repo https://github.com/socheatsok78/Khmer-Unicode-for-MacOS -->
 <!--Last edited by Ukelele version 3.3.0.249 on 2019-02-25 at 14:47 (GMT+7)-->
 <keyboard group="126" id="-10500" name="Khmer Unicode" maxout="3">
     <layouts>
