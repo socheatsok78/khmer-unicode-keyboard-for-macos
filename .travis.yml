@@ -1,5 +1,4 @@
 os: osx
-osx_image: xcode10
 
 install:
   - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
