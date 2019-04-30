@@ -1,0 +1,16 @@
+os: osx
+osx_image: xcode10
+
+install:
+  - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
+
+script:
+  - ./build.sh
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  file: "build/*.pkg"
+  skip_cleanup: true
+  on:
+    tags: true
