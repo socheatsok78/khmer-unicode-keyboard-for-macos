@@ -24,3 +24,7 @@ Done, your Khmer Unicode keyboard is ready!
 These documents provided by [Khmer Software Initiative](http://khmeros.info)
 
 - How to type Khmer Unicode [EN](docs/How_to_type_Khmer_Unicode_v1.0En.pdf), [KM](How_to_type_Khmer_Unicode.ver1.0km.pdf)
+
+## :memo: License
+
+Licensed under the [MIT License](./LICENSE).
