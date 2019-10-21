@@ -1,6 +1,6 @@
 # Khmer Unicode for MacOS
 
-[![Build Status](https://travis-ci.org/socheatsok78/Khmer-Unicode-for-MacOS.svg?branch=master)](https://travis-ci.org/socheatsok78/Khmer-Unicode-for-MacOS)
+[![Build Status](https://travis-ci.com/socheatsok78/Khmer-Unicode-for-MacOS.svg?branch=master)](https://travis-ci.com/socheatsok78/Khmer-Unicode-for-MacOS)
 [![Latest Release](https://img.shields.io/github/tag/socheatsok78/Khmer-Unicode-for-MacOS.svg?label=release)](https://github.com/socheatsok78/Khmer-Unicode-for-MacOS/releases/latest)
 
 ## Installation
@@ -23,7 +23,7 @@ Done, your Khmer Unicode keyboard is ready!
 
 These documents provided by [Khmer Software Initiative](http://khmeros.info)
 
-- How to type Khmer Unicode [EN](docs/How_to_type_Khmer_Unicode_v1.0En.pdf), [KM](How_to_type_Khmer_Unicode.ver1.0km.pdf)
+-   How to type Khmer Unicode [EN](docs/How_to_type_Khmer_Unicode_v1.0En.pdf), [KM](How_to_type_Khmer_Unicode.ver1.0km.pdf)
 
 ## :memo: License
 
