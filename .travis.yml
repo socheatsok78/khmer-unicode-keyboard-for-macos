@@ -17,9 +17,9 @@ jobs:
     install:
       - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
     - stage: build
-      name: Building Installer
-      script:
-        - ./build.sh
+    name: Building Installer
+    script:
+      - ./build.sh
     - stage: test
     name: Preparing Build Environment
     after_success:
