@@ -4,16 +4,32 @@ language: node_js
 node_js:
   - "lts/*"
 
-install:
-  - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
-
-script:
-  - ./build.sh
-
-deploy:
-  provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
-  file: "build/Khmer Unicode Installer.pkg"
-  skip_cleanup: true
-  on:
-    tags: true
+stages:
+  - env
+  - build
+  - test
+  - deploy
+  
+jobs:
+  include:
+    - stage: env
+    name: Preparing Build Environment
+    install:
+      - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
+    - stage: build
+      name: Building Installer
+      script:
+        - ./build.sh
+    - stage: test
+    name: Preparing Build Environment
+    after_success:
+      - sudo /usr/sbin/installer -pkg "build/Khmer Unicode Installer.pkg" -target /
+    - stage: deploy
+    name: Deploy GitHub Release
+    deploy:
+      provider: releases
+      api_key: $GITHUB_OAUTH_TOKEN
+      file: "build/Khmer Unicode Installer.pkg"
+      skip_cleanup: true
+      on:
+        tags: true
