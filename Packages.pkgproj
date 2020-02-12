@@ -430,6 +430,8 @@
 			</dict>
 			<key>PAYLOAD_TYPE</key>
 			<integer>0</integer>
+			<key>PRESERVE_EXTENDED_ATTRIBUTES</key>
+			<false/>
 			<key>SHOW_INVISIBLE</key>
 			<false/>
 			<key>SPLIT_FORKS</key>
@@ -459,7 +461,7 @@
 			<key>AUTHENTICATION</key>
 			<integer>1</integer>
 			<key>CONCLUSION_ACTION</key>
-			<integer>0</integer>
+			<integer>4</integer>
 			<key>FOLLOW_SYMBOLIC_LINKS</key>
 			<false/>
 			<key>IDENTIFIER</key>
@@ -479,7 +481,7 @@
 			<key>USE_HFS+_COMPRESSION</key>
 			<false/>
 			<key>VERSION</key>
-			<string>0.0.1</string>
+			<string>0.0.2</string>
 		</dict>
 		<key>PROJECT_COMMENTS</key>
 		<dict>
