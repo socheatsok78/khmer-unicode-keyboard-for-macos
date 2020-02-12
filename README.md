@@ -15,7 +15,7 @@ Then, Run the **Khmer Unicode Installer.pkg** installer.
 
 To use **Khmer Unicode** in your computer, open `System Preferences > Keyboard > Input Sources` and click the `+` button.
 
-Pick **Others** from the list, then pick **"Khmer Unicode"** and click **Add**
+Pick **Khmer** from the list, then pick **"Khmer Unicode"** and click **Add**
 
 Done, your Khmer Unicode keyboard is ready!
 
