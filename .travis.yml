@@ -18,8 +18,8 @@ after_success:
 
 deploy:
   provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
+  cleanup: true
+  token: $GITHUB_OAUTH_TOKEN
   file: "build/Khmer Unicode Installer.pkg"
-  skip_cleanup: true
   on:
     tags: true
