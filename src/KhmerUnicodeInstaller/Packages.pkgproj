@@ -465,7 +465,7 @@
 			<key>FOLLOW_SYMBOLIC_LINKS</key>
 			<false/>
 			<key>IDENTIFIER</key>
-			<string>net.socheat.pkg.khmerunicode</string>
+			<string>net.socheat.macos.khmerunicode</string>
 			<key>LOCATION</key>
 			<integer>0</integer>
 			<key>NAME</key>
@@ -481,7 +481,7 @@
 			<key>USE_HFS+_COMPRESSION</key>
 			<false/>
 			<key>VERSION</key>
-			<string>1.0.0</string>
+			<string>1.1.0</string>
 		</dict>
 		<key>PROJECT_COMMENTS</key>
 		<dict>
@@ -494,7 +494,7 @@
 			<key>BUILD_PATH</key>
 			<dict>
 				<key>PATH</key>
-				<string>build/KhmerUnicodeInstaller</string>
+				<string>../../build/Installer</string>
 				<key>PATH_TYPE</key>
 				<integer>1</integer>
 			</dict>

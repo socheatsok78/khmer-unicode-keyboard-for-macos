@@ -3,17 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>BuildLocationStyle</key>
-	<string>UseAppPreferences</string>
+	<string>CustomLocation</string>
 	<key>BuildSystemType</key>
 	<string>Latest</string>
 	<key>CustomBuildIntermediatesPath</key>
-	<string>../build/Intermediates.noindex</string>
+	<string>Build/Intermediates.noindex</string>
 	<key>CustomBuildLocationType</key>
 	<string>RelativeToWorkspace</string>
 	<key>CustomBuildProductsPath</key>
-	<string>../build/KhmerUnicode/Products</string>
+	<string>Build/Products</string>
+	<key>DerivedDataCustomLocation</key>
+	<string>DerivedData</string>
 	<key>DerivedDataLocationStyle</key>
-	<string>Default</string>
+	<string>WorkspaceRelativePath</string>
 	<key>IssueFilterStyle</key>
 	<string>ShowActiveSchemeOnly</string>
 	<key>LiveSourceIssuesEnabled</key>
