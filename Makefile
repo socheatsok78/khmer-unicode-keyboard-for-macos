@@ -1,6 +1,6 @@
 .PHONY: main
 
-main: clean bundle installer
+main: clean bundle-info bundle installer
 
 install:
 	@echo "Opening installer..."
@@ -17,6 +17,12 @@ bundle:
 	@cp -r "build/KhmerUnicodeBundle/Products/Release/KhmerUnicode.bundle" \
 		"src/KhmerUnicodeInstaller/Library/Keyboard Layouts"
 	@echo "\n[DONE] Ready to build the installer!"
+
+bundle-info:
+	@echo "Bundle build settings..."
+	@xcodebuild -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
+		-scheme "[Release] KhmerUnicode" \
+		-showBuildSettings
 
 installer:
 	@echo "Building Khmer Unicode Keyboard [Installer]\n"
