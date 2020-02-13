@@ -4,12 +4,16 @@
 <dict>
 	<key>BuildLocationStyle</key>
 	<string>UseAppPreferences</string>
+	<key>BuildSystemType</key>
+	<string>Latest</string>
+	<key>CustomBuildIntermediatesPath</key>
+	<string>../build/Intermediates.noindex</string>
 	<key>CustomBuildLocationType</key>
-	<string>RelativeToDerivedData</string>
-	<key>DerivedDataCustomLocation</key>
-	<string>../build</string>
+	<string>RelativeToWorkspace</string>
+	<key>CustomBuildProductsPath</key>
+	<string>../build/KhmerUnicode/Products</string>
 	<key>DerivedDataLocationStyle</key>
-	<string>WorkspaceRelativePath</string>
+	<string>Default</string>
 	<key>IssueFilterStyle</key>
 	<string>ShowActiveSchemeOnly</string>
 	<key>LiveSourceIssuesEnabled</key>
