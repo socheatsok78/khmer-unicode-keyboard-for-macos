@@ -8,27 +8,28 @@ install:
 
 bundle:
 	@echo "Building Khmer Unicode Keyboard [Bundle]\n"
-	@xcodebuild -project src/KhmerUnicode.xcodeproj \
+	@xcodebuild -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
 				-scheme "[Release] KhmerUnicode" \
 				build
+	@echo "Removing existing KhmerUnicode.bundle from KhmerUnicodeInstaller..."
+	@rm -rf "src/KhmerUnicodeInstaller/Library/Keyboard Layouts/KhmerUnicode.bundle"
+	@echo "Copying KhmerUnicode.bundle to KhmerUnicodeInstaller..."
+	@cp -r "build/KhmerUnicodeBundle/Products/Release/KhmerUnicode.bundle" \
+		"src/KhmerUnicodeInstaller/Library/Keyboard Layouts"
+	@echo "\n[DONE] Ready to build the installer!"
 
 installer:
 	@echo "Building Khmer Unicode Keyboard [Installer]\n"
-	@echo "Copying KhmerUnicode.bundle..."
-	@cp -r "build/KhmerUnicode/Build/Products/Release/KhmerUnicode.bundle" \
-		"Library/Keyboard Layouts"
 	@mkdir build/KhmerUnicodeInstaller
 	@/usr/local/bin/packagesbuild \
 		--verbose \
-		./Packages.pkgproj
+		./src/KhmerUnicodeInstaller/Packages.pkgproj
 
 clean:
 	@echo "Cleaning up..."
-	@echo "Removing build/KhmerUnicode directory..."
-	@rm -rf "build/KhmerUnicode"
+	@rm -rf build/temp/*/
+	@echo "Removing build/KhmerUnicodeBundle directory..."
+	@rm -rf "build/KhmerUnicodeBundle"
 	@echo "Removing build/KhmerUnicodeInstaller directory..."
 	@rm -rf "build/KhmerUnicodeInstaller"
-	@echo "Removing build/ModuleCache.noindex directory..."
-	@rm -rf "build/ModuleCache.noindex"
-	@echo "Removing Library/Keyboard Layouts/KhmerUnicode.bundle from project..."
-	@rm -rf "Library/Keyboard Layouts/KhmerUnicode.bundle"
+	@echo "[DONE] Cleanup completed!\n"

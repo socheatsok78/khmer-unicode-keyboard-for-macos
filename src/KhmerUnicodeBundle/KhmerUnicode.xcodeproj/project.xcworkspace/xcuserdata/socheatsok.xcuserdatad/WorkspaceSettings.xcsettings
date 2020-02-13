@@ -7,13 +7,13 @@
 	<key>BuildSystemType</key>
 	<string>Latest</string>
 	<key>CustomBuildIntermediatesPath</key>
-	<string>Build/Intermediates.noindex</string>
+	<string>../../build/KhmerUnicodeBundle/Intermediates.noindex</string>
 	<key>CustomBuildLocationType</key>
 	<string>RelativeToWorkspace</string>
 	<key>CustomBuildProductsPath</key>
-	<string>Build/Products</string>
+	<string>../../build/KhmerUnicodeBundle/Products</string>
 	<key>DerivedDataCustomLocation</key>
-	<string>DerivedData</string>
+	<string>../../build/temp</string>
 	<key>DerivedDataLocationStyle</key>
 	<string>WorkspaceRelativePath</string>
 	<key>IssueFilterStyle</key>
