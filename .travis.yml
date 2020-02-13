@@ -4,9 +4,16 @@ language: node_js
 node_js:
   - "lts/*"
 
+env:
+  - CONFIGURATION_BUILD_DIR="${TRAVIS_BUILD_DIR}/build"
+
 install:
   - echo ">>> Prepare build environment"
   - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
+
+before_script:
+  - echo "TRAVIS_BUILD_DIR= $TRAVIS_BUILD_DIR"
+  - echo "CONFIGURATION_BUILD_DIR= $CONFIGURATION_BUILD_DIR"
 
 script:
   - echo ">>> Building Khmer Unicode Installer"
