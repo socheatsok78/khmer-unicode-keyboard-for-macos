@@ -26,6 +26,7 @@ bundle-info:
 
 installer:
 	@echo "Building Khmer Unicode Keyboard [Installer]\n"
+	@rm -rf "build/KhmerUnicodeInstaller"
 	@mkdir build/KhmerUnicodeInstaller
 	@/usr/local/bin/packagesbuild \
 		--verbose \
