@@ -16,18 +16,18 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2020 Socheat. All rights reserved.</string>
-	<key>NSPrincipalClass</key>
-	<string></string>
 	<key>KLInfo_Khmer Unicode</key>
 	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<false/>
 		<key>TISInputSourceID</key>
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 		<key>TISIntendedLanguage</key>
 		<string>km-034</string>
-		<key>TICapsLockLanguageSwitchCapable</key>
-		<false/>
 	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2020 Socheat. All rights reserved.</string>
+	<key>NSPrincipalClass</key>
+	<string></string>
 </dict>
 </plist>
