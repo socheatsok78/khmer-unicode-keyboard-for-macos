@@ -10,16 +10,18 @@ install:
 
 script:
   - echo ">>> Building Khmer Unicode Installer"
-  - ./build.sh
+  - make
 
 after_success:
   - echo ">>> Testing Khmer Unicode Installer"
-  - sudo /usr/sbin/installer -pkg "build/Khmer Unicode Installer.pkg" -target /
+  - sudo /usr/sbin/installer \
+    -pkg "build/KhmerUnicodeInstaller/Khmer Unicode Installer.pkg" \
+    -target /
 
 deploy:
   provider: releases
   cleanup: false
   token: $GITHUB_OAUTH_TOKEN
-  file: "build/Khmer Unicode Installer.pkg"
+  file: "build/KhmerUnicodeInstaller/Khmer Unicode Installer.pkg"
   on:
     tags: true
