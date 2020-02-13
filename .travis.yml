@@ -1,27 +1,27 @@
 os: osx
-osx_image: xcode11.2
 
-stages:
-  - build
-  - deploy
+language: node_js
+node_js:
+  - "lts/*"
 
-jobs:
-  include:
-    - stage: build
-      name: "Build KhmerUnicode [Bundle]"
-      script: make bundle
-    - stage: build
-      name: "Build KhmerUnicode [Installer]"
-      cleanup: false
-      install:
-        - echo ">>> Prepare build environment"
-        - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
-      script: make installer
-    - stage: deploy
-      deploy:
-        provider: releases
-        cleanup: false
-        token: $GITHUB_OAUTH_TOKEN
-        file: "build/KhmerUnicodeInstaller/Khmer Unicode Installer.pkg"
-        on:
-          tags: true
+install:
+  - echo ">>> Prepare build environment"
+  - sudo /usr/sbin/installer -pkg bin/Packages.pkg -target /
+
+script:
+  - echo ">>> Building Khmer Unicode Installer"
+  - make
+
+after_success:
+  - echo ">>> Testing Khmer Unicode Installer"
+  - sudo /usr/sbin/installer \
+    -pkg "build/KhmerUnicodeInstaller/Khmer Unicode Installer.pkg" \
+    -target /
+
+deploy:
+  provider: releases
+  cleanup: false
+  token: $GITHUB_OAUTH_TOKEN
+  file: "build/KhmerUnicodeInstaller/Khmer Unicode Installer.pkg"
+  on:
+    tags: true
