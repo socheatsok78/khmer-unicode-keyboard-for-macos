@@ -5,11 +5,14 @@
 
 ## Installation
 
+#### Using `homebrew`
 You can install **Khmer Unicode Keyboard** layout from `homebrew` using the homebrew tab `pp-spaces/khmer-unicode`
 ```sh
 brew tap pp-spaces/khmer-unicode # you only have to do this once!
 brew cask install khmer-unicode-layout
 ```
+
+#### Using package installer
 
 To Install **Khmer Unicode Keyboard** layout for your computer, go to the latest [release link here](https://github.com/socheatsok78/Khmer-Unicode-for-MacOS/releases/latest)
 
