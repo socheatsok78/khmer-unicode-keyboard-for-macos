@@ -19,17 +19,15 @@ Check out https://github.com/pp-spaces/homebrew-khmer-unicode for more informati
 
 To Install **Khmer Unicode Keyboard** layout for your computer, go to the latest [release link here](https://github.com/socheatsok78/Khmer-Unicode-for-MacOS/releases/latest)
 
-Download **Khmer Unicode Installer.pkg** to your computer.
-
-Then, Run the **Khmer Unicode Installer.pkg** installer.
+- Download **Khmer Unicode Installer.pkg** to your computer.
+- Then, Run the **Khmer Unicode Installer.pkg** installer.
 
 ## Adding Keyboard Layout
 
-To use **Khmer Unicode** in your computer, open `System Preferences > Keyboard > Input Sources` and click the `+` button.
-
-Pick **Khmer** from the list, then pick **"Khmer Unicode"** and click **Add**
-
-Done, your Khmer Unicode keyboard is ready!
+To use **Khmer Unicode** in your computer:
+1. Open `System Preferences > Keyboard > Input Sources` and click the `+` button.
+2. Pick **Khmer** from the list, then pick **"Khmer Unicode"** and click **Add**
+3. Done, your Khmer Unicode keyboard is ready!
 
 ## Official Documents
 
