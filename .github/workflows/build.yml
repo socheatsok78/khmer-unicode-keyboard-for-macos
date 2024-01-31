@@ -33,7 +33,7 @@ jobs:
 
       # if a release is being created, upload the package to the release
       - name: Upload releases
-        if: startsWith(github.event.ref, 'refs/tags/v')
+        if: startsWith(github.event.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
           files: release/*
