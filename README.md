@@ -1,6 +1,6 @@
 # Khmer Unicode for MacOS
 
-[![Build Status](https://travis-ci.com/socheatsok78/Khmer-Unicode-for-MacOS.svg?branch=master)](https://travis-ci.com/socheatsok78/Khmer-Unicode-for-MacOS)
+[![Build](https://github.com/socheatsok78/khmer-unicode-keyboard-for-macos/actions/workflows/build.yml/badge.svg)](https://github.com/socheatsok78/khmer-unicode-keyboard-for-macos/actions/workflows/build.yml)
 [![Latest Release](https://img.shields.io/github/tag/socheatsok78/Khmer-Unicode-for-MacOS.svg?label=release)](https://github.com/socheatsok78/Khmer-Unicode-for-MacOS/releases/latest)
 
 ## Installation
