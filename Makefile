@@ -1,42 +1,45 @@
+XOCDEBUILD=/usr/bin/xcodebuild
+PACKAGES=/usr/local/bin/packagesbuild
+CONFIGURATION_BUILD_DIR=$(PWD)/build/KhmerUnicodeBundle/Products/Release
+
 .PHONY: main
 
-main: clean bundle-info bundle installer
+main: clean build installer
 
 install:
 	@echo "Opening installer..."
 	@open "build/KhmerUnicodeInstaller/Khmer Unicode Installer.pkg"
 
-bundle:
+build-info:
+	@echo "Bundle build settings..."
+	@$(XOCDEBUILD) -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
+		-scheme "[Release] KhmerUnicode" \
+		-showBuildSettings \
+		CONFIGURATION_BUILD_DIR=$(CONFIGURATION_BUILD_DIR)
+
+.PHONY: build
+build: build-info
+	@mkdir -p build
 	@echo "Building Khmer Unicode Keyboard [Bundle]\n"
-	@xcodebuild -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
+	@$(XOCDEBUILD) -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
 				-scheme "[Release] KhmerUnicode" \
-				build
-	@echo "Removing existing KhmerUnicode.bundle from KhmerUnicodeInstaller..."
-	@rm -rf "src/KhmerUnicodeInstaller/Library/Keyboard Layouts/KhmerUnicode.bundle"
+				build \
+				CONFIGURATION_BUILD_DIR=$(CONFIGURATION_BUILD_DIR)
 	@echo "Copying KhmerUnicode.bundle to KhmerUnicodeInstaller..."
 	@cp -r "build/KhmerUnicodeBundle/Products/Release/KhmerUnicode.bundle" \
 		"src/KhmerUnicodeInstaller/Library/Keyboard Layouts"
 	@echo "\n[DONE] Ready to build the installer!"
 
-bundle-info:
-	@echo "Bundle build settings..."
-	@xcodebuild -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
-		-scheme "[Release] KhmerUnicode" \
-		-showBuildSettings
-
 installer:
 	@echo "Building Khmer Unicode Keyboard [Installer]\n"
 	@rm -rf "build/KhmerUnicodeInstaller"
 	@mkdir build/KhmerUnicodeInstaller
-	@/usr/local/bin/packagesbuild \
+	@$(PACKAGES) \
 		--verbose \
-		./src/KhmerUnicodeInstaller/Packages.pkgproj
+		./src/KhmerUnicodeInstaller/Packages.pkgproj \
 
 clean:
 	@echo "Cleaning up..."
-	@rm -rf build/temp/*/
-	@echo "Removing build/KhmerUnicodeBundle directory..."
-	@rm -rf "build/KhmerUnicodeBundle"
-	@echo "Removing build/KhmerUnicodeInstaller directory..."
-	@rm -rf "build/KhmerUnicodeInstaller"
+	@rm -rf build
+	@rm -rf "src/KhmerUnicodeInstaller/Library/Keyboard Layouts/KhmerUnicode.bundle"
 	@echo "[DONE] Cleanup completed!\n"
