@@ -16,5 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build project
-        run: make
+      - name: Install Integrated packaging environment (packages)
+        run: brew install packages
+
+      - name: Build KhmerUnicode.bundle
+        run: make build
+
+      - name: Build KhmerUnicode installer
+        run: make installer
