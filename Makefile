@@ -1,5 +1,6 @@
 XOCDEBUILD=/usr/bin/xcodebuild
 PACKAGES=/usr/local/bin/packagesbuild
+RELEASE_DIR=$(PWD)/release
 CONFIGURATION_BUILD_DIR=$(PWD)/build/KhmerUnicodeBundle/Products/Release
 
 .PHONY: main
@@ -19,7 +20,7 @@ build-info:
 
 .PHONY: build
 build: build-info
-	@mkdir -p build
+	@mkdir -p {build,release}
 	@echo "Building Khmer Unicode Keyboard [Bundle]\n"
 	@$(XOCDEBUILD) -project src/KhmerUnicodeBundle/KhmerUnicode.xcodeproj \
 				-scheme "[Release] KhmerUnicode" \
@@ -28,6 +29,9 @@ build: build-info
 	@echo "Copying KhmerUnicode.bundle to KhmerUnicodeInstaller..."
 	@cp -r "build/KhmerUnicodeBundle/Products/Release/KhmerUnicode.bundle" \
 		"src/KhmerUnicodeInstaller/Library/Keyboard Layouts"
+	@echo "Creating KhmerUnicode.bundle.zip..."
+	@cd "build/KhmerUnicodeBundle/Products/Release" && \
+		zip -r "$(RELEASE_DIR)/KhmerUnicode.bundle.zip" KhmerUnicode.bundle
 	@echo "\n[DONE] Ready to build the installer!"
 
 installer:
@@ -36,10 +40,12 @@ installer:
 	@mkdir build/KhmerUnicodeInstaller
 	@$(PACKAGES) \
 		--verbose \
-		./src/KhmerUnicodeInstaller/Packages.pkgproj \
+		./src/KhmerUnicodeInstaller/Packages.pkgproj
+	@cp "build/KhmerUnicodeInstaller/Khmer Unicode.pkg" \
+		"$(RELEASE_DIR)/Khmer Unicode.pkg"
 
 clean:
 	@echo "Cleaning up..."
-	@rm -rf build
+	@rm -rf {build,release}
 	@rm -rf "src/KhmerUnicodeInstaller/Library/Keyboard Layouts/KhmerUnicode.bundle"
 	@echo "[DONE] Cleanup completed!\n"
