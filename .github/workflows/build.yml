@@ -36,4 +36,4 @@ jobs:
         if: startsWith(github.event.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
         with:
-          files: release
+          files: release/*
