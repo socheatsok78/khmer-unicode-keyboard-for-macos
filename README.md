@@ -6,13 +6,16 @@
 ## Installation
 
 #### Using `homebrew`
-You can install **Khmer Unicode Keyboard** layout from `homebrew` using the homebrew tap `pp-spaces/khmer-unicode`
+You can install **Khmer Unicode Keyboard** layout from `homebrew` using the homebrew tap `openkhmerfonts/tap`
 ```sh
-brew tap pp-spaces/khmer-unicode # you only have to do this once!
+brew tap openkhmerfonts/tap            # you only have to do this once!
 brew cask install khmer-unicode-layout
 ```
 
-Check out https://github.com/pp-spaces/homebrew-khmer-unicode for more information.
+> [!IMPORTANT]
+> The `pp-spaces/khmer-unicode`'s Homebrew tap has been deprecated. Please use the new `openkhmerfonts/tap`'s Homebrew tap instead.
+
+Check out https://github.com/openkhmerfonts/homebrew-tap for more information.
 
 #### Using package installer
 <img width="732" alt="Khmer Unicode Installer.pk" src="https://github.com/socheatsok78/khmer-unicode-keyboard-for-macos/assets/4363857/3ca1c024-597a-4f43-aa09-dfc5767c7bb5">
