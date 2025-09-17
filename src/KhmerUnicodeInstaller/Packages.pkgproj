@@ -665,6 +665,23 @@
 					<key>SEPARATOR</key>
 					<true/>
 				</dict>
+				<dict>
+					<key>PATTERNS_ARRAY</key>
+					<array>
+						<dict>
+							<key>REGULAR_EXPRESSION</key>
+							<false/>
+							<key>STRING</key>
+							<string>.gitignore</string>
+							<key>TYPE</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+					<key>PROTECTED</key>
+					<false/>
+					<key>STATE</key>
+					<true/>
+				</dict>
 			</array>
 			<key>NAME</key>
 			<string>Khmer Unicode</string>
