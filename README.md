@@ -9,7 +9,7 @@
 You can install **Khmer Unicode Keyboard** layout from `homebrew` using the homebrew tap `openkhmerfonts/tap`
 ```sh
 brew tap openkhmerfonts/tap            # you only have to do this once!
-brew cask install khmer-unicode-layout
+brew install --cask khmer-unicode-layout
 ```
 
 > [!IMPORTANT]
